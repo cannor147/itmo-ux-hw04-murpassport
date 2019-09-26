@@ -1,10 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "cp -R ./src public",
     "lint": "npm run lint:html && npm run lint:css",
-    "lint:html": "linthtml \"src/**/*.html\"",
-    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:html": "linthtml \"public/**/*.html\"",
+    "lint:css": "stylelint \"public/**/*.css\"",
     "format": "prettier --write \"**/*.{js,css,json,yaml,yml,md}\""
   },
   "devDependencies": {
