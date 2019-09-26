@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "name": "ux-task",
+  "name": "00-template",
   "routes": [{ "src": "/", "dest": "/public/index.html" }]
 }
