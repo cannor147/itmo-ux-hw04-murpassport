@@ -1,6 +1,6 @@
 let isSimulationEnabled = false;
 
-window.enableSimulation = function () {
+window.enableSimulation = function() {
   if (isSimulationEnabled) {
     console.log('simulation has already enabled');
 
@@ -13,12 +13,16 @@ window.enableSimulation = function () {
 
   let cursor = window.document.createElement('div');
 
-  cursor.className='mouse';
+  cursor.className = 'mouse';
   window.document.body.appendChild(cursor);
 
   let needAnimate = true;
-  window.document.addEventListener('mouseenter', function(){needAnimate = true});
-  window.document.addEventListener('mouseleave', function(){needAnimate = false});
+  window.document.addEventListener('mouseenter', function() {
+    needAnimate = true;
+  });
+  window.document.addEventListener('mouseleave', function() {
+    needAnimate = false;
+  });
 
   window.document.addEventListener('mousemove', move);
 
@@ -39,13 +43,12 @@ window.enableSimulation = function () {
     randomizeCoords();
   }
 
-
   function animate() {
-    randomizeCoords()
+    randomizeCoords();
   }
 
   function randomizeCoords() {
-    if(!needAnimate) {
+    if (!needAnimate) {
       setPosition(-1000, -1000);
 
       return;
@@ -69,12 +72,12 @@ window.enableSimulation = function () {
   }
 
   function addStyle() {
-    if(!window.document.head.contains(styleNode)) {
+    if (!window.document.head.contains(styleNode)) {
       window.document.head.appendChild(styleNode);
     }
   }
 
-  window.disableSimulation = function () {
+  window.disableSimulation = function() {
     if (!isSimulationEnabled) {
       console.log('please enable simulation');
 
@@ -87,9 +90,8 @@ window.enableSimulation = function () {
     window.document.head.removeChild(styleNode);
 
     isSimulationEnabled = false;
-  }
+  };
 };
-
 
 function getStyleNode() {
   const styleNode = window.document.createElement('style');

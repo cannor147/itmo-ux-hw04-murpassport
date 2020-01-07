@@ -20,18 +20,6 @@
   --border-color: #222222;
 }
 
-/*:root {*/
-/*  --main-color: #6320df;*/
-/*  --background-color: #000000;*/
-/*  --highlight-color: #feaafa;*/
-/*  --accent-color: #8330ff;*/
-/*  --text-color: #ffffff;*/
-/*  --header-text-color: #feddfa;*/
-/*  --secondary-text-color: #dddddd;*/
-/*  --border-color: #221123;*/
-/*}*/
-
-/* general */
 html {
   background-color: var(--background-color);
   color: var(--text-color);
