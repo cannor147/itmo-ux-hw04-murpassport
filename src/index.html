@@ -3,10 +3,170 @@
   <head>
     <meta charset="utf-8">
     <title>04-murpassport</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/box.css">
+    <link rel="stylesheet" href="css/poster.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-  <div width="100" height="1000"> </div>
-  <script type="text/javascript" src="./simulation.js"> </script>
+    <header class="header">
+      <h1 class="header__site-name">
+        <a class="hidden-link" href="index.html">Мурпаспорт</a>
+      </h1>
+      <a class="header__skip hidden-link" href="#main__content">Перейти к содержимому &raquo;</a>
+    </header>
+    <main class="main">
+      <nav>
+        <ul class="main__menu">
+          <li><a class="main__menu-item hidden-link" href="#cat-data-box">Данные</a></li>
+          <li><a class="main__menu-item hidden-link" href="#cat-vaccinations-box">Прививки</a></li>
+          <li><a class="main__menu-item hidden-link" href="#cat-gallery-box">Галерея</a></li>
+          <li><a class="main__menu-item hidden-link" href="#feedback-form-box">Обратная связь</a></li>
+        </ul>
+      </nav>
+      <div class="main__content" id="main__content">
+        <input type="checkbox" class="trick-out-cat-form-box-close-input"
+               id="trick-out-cat-form-box-close-input" tabindex="-1"/>
+        <section class="advertisement box trick-out-cat-form-box" id="trick-out-cat-form-box">
+          <div class="box__element-table">
+            <div class="box__element form-wrapper">
+              <h2 class="box__title">Прокачай кота!</h2>
+              <span class="box__description">
+            Подпишись на рассылку нашего тренера и получи индивидуальную подобранную программу
+            тренировок для своего кота
+        </span>
+              <form class="box__content form trick-out-cat-form">
+                <div class="form__line">
+                  Кот
+                  <input class="form__input trick-out-cat-form__cat-age" name="cat-age"
+                         aria-label="Возраст кота"/>
+                  лет и
+                  <input class="form__input trick-out-cat-form__cat-weight" name="cat-weight"
+                         aria-label="Вес кота"/>
+                  кг
+                </div>
+                <div class="form__line">
+                  <input type="email" class="form__input" name="user-email"
+                         aria-label="Ваш email" placeholder="Email (ваш)"/>
+                </div>
+                <div class="form__line">
+                  <select class="form__input form__select trick-out-cat-form__cat-dream" name="cat-dream"
+                          aria-label="Желаемый вариант прокачки">
+                    <option class="form__option" value="increase-weight">Набор массы</option>
+                    <option class="form__option" value="decrease-weight">Похудение</option>
+                    <option class="form__option" value="none">Не знаю</option>
+                  </select>
+                </div>
+                <div class="form__line">
+                  <label class="muted smaller" for="trick-out-cat-form__spam">
+                    <input type="checkbox" class="form__input-checkbox" name="spam"
+                           id="trick-out-cat-form__spam"/>
+                    <span class="form__input-checkbox-view">
+                  <span class="form__input-checkbox-icon"></span>
+                </span>
+                    Хочу спам
+                  </label>
+                </div>
+                <div class="form__line">
+                  <button class="form__submit-button" type="submit">Подписаться</button>
+                </div>
+              </form>
+            </div>
+            <div class="box__element poster">
+              <div class="poster__tablecloth"></div>
+              <img class="poster__media" title="Ржомба"
+                   alt="Ржомба: кот с угарным лицом сидит за ноутбуком" src="img/rzhomba.jpg"/>
+            </div>
+          </div>
+          <label for="trick-out-cat-form-box-close-input">
+            <span class="box__close-button" title="Закрыть" role="button" tabindex="0">×</span>
+          </label>
+        </section>
+        <section class="box cat-data-box" id="cat-data-box">
+          <div class="box__element-table">
+            <div class="box__element ">
+              <h2 class="box__title">Данные</h2>
+              <div class="box__content">
+                <div class="cat-data-box__cat-information">
+                  <p>Имя: Акула</p>
+                  <p>Порода: круглоухий рекс</p>
+                  <p>Дата рождения: 22.12.2009</p>
+                </div>
+              </div>
+            </div>
+            <div class="box__element">
+              <img class="cat-data-box__cat-avatar" title="Акула"
+                   alt="Аватарка котика Акула" src="img/cat/1/1.png"/>
+            </div>
+          </div>
+        </section>
+        <section class="box cat-vaccinations-box" id="cat-vaccinations-box">
+          <h2 class="box__title">Прививки</h2>
+          <div class="box__content">
+            <ol>
+              <li>От чувства собственной важности</li>
+              <li>От нелюбви к людям</li>
+              <li>Для лучшей охоты за мышами</li>
+            </ol>
+          </div>
+        </section>
+        <section class="box cat-gallery-box" id="cat-gallery-box">
+          <h2 class="box__title">Галерея</h2>
+          <div class="box__content gallery">
+            <img alt="Котик Акула валяется на кроватке" src="img/cat/1/1.png"/>
+            <img alt="Котик Акула мило смотрит наверх" src="img/cat/1/2.png"/>
+            <img alt="Котик Акула сидит на стуле и смотрит в камеру" src="img/cat/1/3.png"/>
+          </div>
+        </section>
+        <section class="box feedback-form-box" id="feedback-form-box">
+          <h2 class="box__title">Обратная связь</h2>
+          <form class="box__content form feedback-form">
+            <div class="form__line">
+          <textarea class="form__input" rows="6"
+                    aria-label="Ваш комментарий" placeholder="Ваш комментарий"></textarea>
+            </div>
+            <div class="form__line">
+              <input type="email" class="form__input" name="user-email"
+                     aria-label="Ваш email" placeholder="e-mail"/>
+            </div>
+            <div class="form__line">
+              <button class="form__submit-button" type="submit">Отправить</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__contacts">
+        <div class="footer__write-us muted">Напишите нам:</div>
+        <div class="footer__email">
+          <img class="footer__email-icon small-icon" src="img/icon/email.png" alt="email">
+          <address class="footer__email-address">cats@babuli.ru</address>
+        </div>
+        <div class="footer__email">
+          <img class="footer__email-icon small-icon" src="img/icon/email.png" alt="email">
+          <address class="footer__email-address">vnuchek@babuli.ru</address>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer__icons-made-by">Icons made by
+          <a class="link" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+          and
+          <a class="link" href="https://www.flaticon.com/authors/google" title="Google">Google</a>
+          from
+          <a class="link" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+        <div class="footer__site-copyright" title="Мурпаспорт">
+          © 2019 ООО «<a class="link" href="index.html">Мурпаспорт</a>»
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./simulation.js"> </script>
   </body>
 </html>

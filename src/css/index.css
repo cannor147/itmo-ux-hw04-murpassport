@@ -1,0 +1,34 @@
+.trick-out-cat-form-box .form-wrapper {
+  width: 55%;
+}
+.trick-out-cat-form-box .poster {
+  width: 45%;
+}
+.trick-out-cat-form {
+  margin-right: 80px;
+}
+.trick-out-cat-form__cat-age {
+  display: inline-block;
+
+  width: 3.5rem;
+  margin: 0 3px;
+}
+.trick-out-cat-form__cat-weight {
+  display: inline-block;
+
+  width: 3.5rem;
+  margin: 0 3px;
+}
+.trick-out-cat-form-box-close-input {
+  position: absolute;
+  top: -20000px;
+}
+.trick-out-cat-form-box-close-input:checked + .trick-out-cat-form-box {
+  display: none;
+}
+
+.cat-data-box__cat-avatar {
+  height: 240px;
+  margin-left: 80px;
+  padding: 30px;
+}

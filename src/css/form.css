@@ -1,0 +1,131 @@
+.form__line {
+  display: block;
+
+  margin-top: 10px;
+}
+
+.form__input {
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 3px 5px;
+
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+.form__input:focus {
+  border-color: var(--highlight-color);
+
+  background-color: var(--main-color);
+
+  color: var(--text-color);
+  outline: none;
+}
+.form__input::placeholder {
+  color: var(--accent-color);
+}
+.form__input:focus::placeholder {
+  color: var(--highlight-color);
+}
+
+.form__input-checkbox {
+  position: absolute;
+  top: -1000000px;
+  left: -1000000px;
+
+  display: inline-block;
+}
+.form__input-checkbox-view {
+  position: relative;
+
+  display: inline-block;
+
+  width: 13px;
+  height: 13px;
+  margin: 0 4px -4px 0;
+
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.form__input-checkbox:checked + .form__input-checkbox-view {
+  background-color: var(--accent-color);
+}
+.form__input-checkbox:focus + .form__input-checkbox-view {
+  border: 2px solid var(--highlight-color);
+
+  background-color: var(--main-color);
+}
+.form__input-checkbox:active + .form__input-checkbox-view {
+  border: 2px solid var(--highlight-color);
+
+  background-color: var(--main-color);
+}
+.form__input-checkbox-icon {
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  z-index: 1000;
+
+  width: 65%;
+  height: 16%;
+  margin: auto;
+
+  border: 3px solid var(--background-color);
+  border-top: none;
+  border-right: none;
+
+  transform: rotate(-45deg);
+
+  background: transparent;
+}
+.form__input-checkbox:focus + .form__input-checkbox-view > .form__input-checkbox-icon {
+  border-color: var(--highlight-color);
+}
+.form__input-checkbox:active + .form__input-checkbox-view > .form__input-checkbox-icon {
+  border-color: var(--highlight-color);
+}
+.form__input-checkbox:checked + .form__input-checkbox-view > .form__input-checkbox-icon {
+  visibility: visible;
+}
+.form__input-checkbox:not(:checked) + .form__input-checkbox-view > .form__input-checkbox-icon {
+  visibility: hidden;
+}
+
+.form__submit-button {
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 6px 10px;
+
+  border: 2px solid transparent;
+  border-radius: 2px;
+
+  background-color: var(--main-color);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  outline: none;
+}
+.form__submit-button:focus {
+  border: 2px solid var(--highlight-color);
+
+  outline: none;
+}
+.form__submit-button:hover {
+  border: 2px solid var(--accent-color);
+}
